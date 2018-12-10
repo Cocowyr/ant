@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tp5简易留言板</title>
+<!-- 	<style type="text/css">
+		.pagination li{
+			display:inline-block;;
+			padding-right: 20px;
+			list-style: none;
+		}
+		ul li {list-style: none;}
+	</style> -->
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<div class="container">
+		<h1>留言提示 - Tp5建议留言板</h1>
+		<p>留言如下:</p>
+		<!-- <br />---------------------<br />	
+		{volist name="show" id="vo"}
+		{$i}:{$vo.id}:{$vo.name}<br/>
+		{/volist} 
+		<br />---------------------<br /> -->
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr >
+					<th>ID</th>
+					<th>标题</th>
+					<th>内容</th>
+					<th>留言时间</th>
+				</tr>
+			</thead>
+			<tbody>
+				{volist name='show' id='vo'}
+				<tr >
+					<th>{$vo.id}</th>
+					<td>
+					<a href="./view/id/{$vo.id} ">{$vo.title|default="这家伙很懒,什么也没留下!"}</a>
+					</td>
+					<td>{$vo.content|mb_substr=0,20,'utf-8'|default="这家伙很懒,什么也没留下!"}					</td>
+					<td>{$vo.creat_time }</td>
+				</tr>
+		    	<!-- <li> {$i}:{$vo.id}:{$vo.name}</li> -->
+				{/volist}
+			</tbody>
+		</table>
+		{$show|raw}
+		<a href="/Bbs/add/">发布留言</a>
+	</div>
+</body>
+<!-- <script>
+$("#companyTable").bootstrapTable({
+        url: '/bbs/show',
+        columns: [{
+            field: 'statebox',
+            checkbox: true
+        },{
+            field: 'name',
+            title: '姓名'
+        }, {
+            field: 'age',
+            title: '年龄'
+        }, {
+            field: 'id',
+            title: '证件号'
+        }],
+        striped:true,
+        onClickRow:function(row, $element,field){
+            var i = $element.data('index');//可通过此参数获取当前行号
+            alert(i+"，"+row.age+"，"+field);
+        }
+    });
+</script> -->
+
+</html>

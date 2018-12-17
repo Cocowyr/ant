@@ -57,11 +57,11 @@ class Bbs extends Controller
       //echo input('param.id');
       if ($id<>'') {
         $list = Db::name('data')->where('id','=',$id)->select();
-        dump($list);
+        //dump($list);
         $up = Db::name('data')->where('id','>',$id)->order('id','')->limit(1)->value('id');
-        dump($up);
+        //dump($up);
         $next = Db::name('data')->where('id','<',$id)->order('id','desc')->limit(1)->value('id');
-        dump($next == 0);
+        //dump($next == 0);
 
         $this->assign('up',$up);
         $this->assign('next',$next);

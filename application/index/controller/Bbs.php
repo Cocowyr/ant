@@ -49,7 +49,7 @@ class Bbs extends Controller
 
       }
       
-      return $this->fetch();
+      return $this->fetch('Bbs/add');
     }
     public function view()
     {
@@ -66,7 +66,7 @@ class Bbs extends Controller
         $this->assign('up',$up);
         $this->assign('next',$next);
         $this->assign('list',$list);
-        return $this->fetch();
+        return $this->fetch('Bbs/view');
       }
       return "留言不存在";
 

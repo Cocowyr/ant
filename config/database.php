@@ -12,8 +12,9 @@
 // update user set authentication_string='' where user='root'
 //ALTER user 'root'@'localhost' IDENTIFIED BY 'Root1.^12222'
 // INSERT INTO `mysql`.`user`(`Host`, `User`, `Select_priv`, `Insert_priv`, `Update_priv`, `Delete_priv`, `Create_priv`, `Drop_priv`, `Reload_priv`, `Shutdown_priv`, `Process_priv`, `File_priv`, `Grant_priv`, `References_priv`, `Index_priv`, `Alter_priv`, `Show_db_priv`, `Super_priv`, `Create_tmp_table_priv`, `Lock_tables_priv`, `Execute_priv`, `Repl_slave_priv`, `Repl_client_priv`, `Create_view_priv`, `Show_view_priv`, `Create_routine_priv`, `Alter_routine_priv`, `Create_user_priv`, `Event_priv`, `Trigger_priv`, `Create_tablespace_priv`, `ssl_type`, `ssl_cipher`, `x509_issuer`, `x509_subject`, `max_questions`, `max_updates`, `max_connections`, `max_user_connections`, `plugin`, `authentication_string`, `password_expired`, `password_last_changed`, `password_lifetime`, `account_locked`, `Create_role_priv`, `Drop_role_priv`, `Password_reuse_history`, `Password_reuse_time`) VALUES (NULL, NULL, 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', 'N', NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'caching_sha2_password', NULL, 'N', NULL, NULL, 'N', 'N', 'N', NULL, NULL);
-//ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Root1.^12222';
-
+//ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Root1.^12222'
+//ALTER USER 'root'@'localhost' IDENTIFIED BY '123';
+//GRANT ALL PRIVILEGES ON *.* TO 'kgc'@'%' IDENTIFIED BY '123' WITH GRANT OPTION;
 
 return [
     // 数据库类型

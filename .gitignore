@@ -1,0 +1,9 @@
+/.idea
+/.vscode
+/vendor
+/config/database.php
+*.log
+thinkphp
+.env
+.DS_Store
+!thinkphp/library/think/Auth.php

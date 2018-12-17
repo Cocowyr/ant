@@ -54,7 +54,7 @@ class Bbs extends Controller
     public function view()
     {
       $id = input('param.id');
-      echo input('param.id');
+      //echo input('param.id');
       if ($id<>'') {
         $list = Db::name('data')->where('id','=',$id)->select();
         dump($list);

@@ -62,7 +62,6 @@ class Bbs extends Controller
         //dump($up);
         $next = Db::name('data')->where('id','<',$id)->order('id','desc')->limit(1)->value('id');
         //dump($next == 0);
-
         $this->assign('up',$up);
         $this->assign('next',$next);
         $this->assign('list',$list);

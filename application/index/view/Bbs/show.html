@@ -48,7 +48,7 @@
 					<a href="./view/id/{$vo.id} ">{$vo.title|default="这家伙很懒,什么也没留下!"}</a>
 					</td>
 					<td>{$vo.content|mb_substr=0,20,'utf-8'|default="这家伙很懒,什么也没留下!"}					</td>
-					<td>{$vo.creat_time }</td>
+					<td>{$vo.creat_time|date="y-m-d h:i" }</td>
 				</tr>
 		    	<!-- <li> {$i}:{$vo.id}:{$vo.name}</li> -->
 				{/volist}

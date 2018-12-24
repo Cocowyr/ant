@@ -46,7 +46,6 @@ class Bbs extends Controller
         return $this->success('恭喜您留言成功!','Bbs/show');
       }else{
         //return $this->error('新增失败');
-
       }
       
       return $this->fetch('Bbs/add');

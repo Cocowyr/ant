@@ -14,7 +14,9 @@
 <body>
 	<div class="container">
 		<h2>
-			<a href="/bbs/show">Tp5简易留言板</a>
+			<!-- <a href="/bbs/show">Tp5简易留言板</a> -->
+			<a href="{$Think.server.script_name}/bbs/show">Tp5简易留言板</a>
+
 		</h2>
 
 		<div class="panel panel-default">
@@ -64,6 +66,12 @@
 			{/if}
 		</ul>
 	</nav>
+	<div class="panel panel-default">
+		<div class="panel-heading">扫码访问当前留言</div>
+		<div class="panel-body">
+			<img src="http://b.bshare.cn/barCode?site=weixin&url={$Request.root.true}/{$Request.path}">
+		</div>
+	</div>
 		
 	</div>
 </body>

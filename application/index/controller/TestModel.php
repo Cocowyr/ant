@@ -32,4 +32,4 @@ class TestModel extends Controller
 }
  ?>
 
- grant all privileges on *.* to 'back'@'%' identified by "123";
+ grant all privileges on *.* to 'back'@'%' identified by "123";                                                         

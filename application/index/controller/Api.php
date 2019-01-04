@@ -429,7 +429,7 @@ else {
         $this->assign('data',$data);
 
         // 渲染模板输出
-        return $this->fetch();
+        return $this->fetch('Api/domain');
 
     }
 

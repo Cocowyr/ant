@@ -295,7 +295,7 @@ else {
 
             dump("演示一下 api跨域访问");
 
-            $url = "http://open.gaoxueya.com/tp5/public/index.php/index/bbs/add";
+            $url = "http://106.12.15.151/bbs/add";
             // $url = file_get_contents($url);
 
             // echo $url ;

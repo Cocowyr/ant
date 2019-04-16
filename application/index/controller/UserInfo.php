@@ -8,7 +8,7 @@ use think\Request;
 /**
  * 
  */
-class UserInfo  extends Controller
+class Userinfo  extends Controller
 {
 	
 

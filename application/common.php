@@ -11,7 +11,6 @@
 
 // 应用公共文件
 // Cookie解密
-
 function dCookie($string, $key = '')
 {
     if (!$key) return '';
@@ -21,7 +20,7 @@ function dCookie($string, $key = '')
     $keya = md5(substr($key, 0, 16));
     $keyb = md5(substr($key, 16, 16));
     $keyc = $ckey_length ? substr($string, 0, $ckey_length) : '';
-
+/*  */
     $cryptkey   = $keya . md5($keya . $keyc);
     $key_length = strlen($cryptkey);
 

@@ -18,8 +18,10 @@ class UserInfo  extends Controller
 		$phone    = $Request->post('phone');
 	    $pwd = $Request->post('password');
         $rePwd = $Request->post('rePassword');
-		
-
+		$res = Db::name('user')->where('phone',$phone)->select();
+        if ($res) {
+            return return_code(205,'此号码已注册过');
+        }
       	$data = [
             'phone'  => $phone,
             'password' => $pwd,
@@ -49,7 +51,7 @@ class UserInfo  extends Controller
       	if ($result) {
       		return return_code(200, '注册成功');
       	}else{
-      		return return_code(200, '注册失败');;
+      		return return_code(204, '注册失败');
       	}
 	}
 	public function login(){
